@@ -19,17 +19,17 @@ Build a data engineering pipeline that:
 1. **Data Acquisition (`fetch_top100_marketcap.py`)**
    - Source: Yahoo Finance via `yfinance`
    - Fetches historical data (price & market cap) for a wide universe of US stocks.
-   - Stores data in a DuckDB in-memory database.
+   - Stores data in a SQL DB.
 
 2. **Data Storage**
-   - In-memory SQL via DuckDB
+   - SQL DB
    - Tables: `stocks`, `prices`, `market_caps`
 
 3. **Index Construction (`construct_index.py`)**
    - For each day:
      - Select top 100 stocks by market cap.
      - Assign equal weight (1%).
-     - Calculate the notional index value.
+     - Calculate the Equal-Weighted index value.
 
 4. **Composition Tracking (`track_composition.py`)**
    - Tracks:
@@ -107,7 +107,7 @@ The generated `index_report.xlsx` includes:
 ---
 
 ### 🗄️ SQL Database Setup
-- Used **MySQL** for fast, in-memory SQL operations.
+- Used **MySQL** for SQL operations.
 - Created normalized tables:
   - `stocks`
   - `prices`
