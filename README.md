@@ -15,26 +15,6 @@ Build a data engineering pipeline that:
 
 ---
 
-##  Project Structure
-
-
-├── output/
-│   └── index_report.xlsx             # Final output Excel with multiple analysis sheets
-├── utils/
-│   ├── db_utils.py                   # Database connection and table creation
-│   └── config.py                     # Configuration file for database connection and dates
-├── scripts/
-│   ├── fetch_top100_marketcap_1.py   # Fetches stock data and stores it in DuckDB
-│   ├── construct_index_2.py          # Constructs the index based on top 100 stocks
-│   ├── track_composition_3.py        # Tracks index changes and daily composition
-│   └── analysis.py                   # Computes and exports final performance metrics
-├── README.md                         # Project documentation
-└── driver.py                         # Driver script to run the pipeline
-
-
-
-
-
 
 1. **Data Acquisition (`fetch_top100_marketcap.py`)**
    - Source: Yahoo Finance via `yfinance`
