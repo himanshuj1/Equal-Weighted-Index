@@ -1,4 +1,4 @@
-# 📊 Equal-Weighted Top 100 US Stocks Index Tracker
+# Equal-Weighted Top 100 US Stocks Index Tracker
 
 This project constructs and tracks an **equal-weighted index** of the **top 100 US stocks by market capitalization**, updating it daily over the past month. The system is designed for modularity, reproducibility, and ease of analysis via SQL-like queries and Excel outputs.
 
@@ -15,21 +15,22 @@ Build a data engineering pipeline that:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 
 ├── output/
-│ └── index_report.xlsx # Final output Excel with multiple analysis sheets
+│   └── index_report.xlsx             # Final output Excel with multiple analysis sheets
 ├── utils/
-│ └── db_utils.py # Database connection and table creation
-│ └── config.py # Configuration file for database connection and dates
+│   ├── db_utils.py                   # Database connection and table creation
+│   └── config.py                     # Configuration file for database connection and dates
 ├── scripts/
-│ └── fetch_top100_marketcap_1.py # Fetches stock data and stores it in DuckDB
-│ └── construct_index_2.py # Constructs the index based on top 100 stocks
-│ └── track_composition_3.py # Tracks index changes and daily composition
-│ └── analysis.py # Computes and exports final performance metrics
-└── README.md # Project documentation
-└── driver.py # Driver script to run the pipeline
+│   ├── fetch_top100_marketcap_1.py   # Fetches stock data and stores it in DuckDB
+│   ├── construct_index_2.py          # Constructs the index based on top 100 stocks
+│   ├── track_composition_3.py        # Tracks index changes and daily composition
+│   └── analysis.py                   # Computes and exports final performance metrics
+├── README.md                         # Project documentation
+└── driver.py                         # Driver script to run the pipeline
+
 
 
 
@@ -62,7 +63,7 @@ Build a data engineering pipeline that:
      - Composition changes count
    - Exports all outputs to a multi-sheet Excel file
 
-## 📊 Excel Output Structure
+##  Excel Output Structure
 
 The generated `index_report.xlsx` includes:
 
@@ -74,7 +75,7 @@ The generated `index_report.xlsx` includes:
 | `summary_metrics`    | Total changes, best/worst days, aggregate stats                          |
 
 
-## ⚙️ Setup Instructions
+## ⚙ Setup Instructions
 
 ### Prerequisites
 
@@ -109,9 +110,9 @@ The generated `index_report.xlsx` includes:
 
 
 
-# 📈 Custom Index Construction using US Stock Market Data
+#  Equal-Weighted Index Construction using US Stock Market Data
 
-## 📚 Analysis Process, Key Findings, and Design Decisions
+##  Analysis Process, Key Findings, and Design Decisions
 
 ---
 
